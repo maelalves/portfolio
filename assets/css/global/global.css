@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+@import url(../components/colors.css);
+
+@font-face {
+  font-family: "Nunito";
+  src: url(../../font/Nunito-sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+}
+
+/* Reset de estilos*/
+body,
+ul {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.5;
+  list-style: none;
+}
+main {
+  box-sizing: border-box;
+  border: solid 1px transparent;
+  
+}
+
+/* Estilos do cabeçalho */
+#header {
+  background-color: var(--colorDarkGray);
+  color: var(--colorWhite);
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  height: 10%;
+  padding: 0% 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 1px 9px 0px var(--colorDarkGray);
+  z-index: 100;
+}
+
+#header h2 {
+  font-size: 1.9em;
+  font-weight: 500;
+}
+
+#header a {
+  color: var(--colorBranco);
+  text-decoration: none;
+}
+
+#menu {
+  font-family: 'Nunito';
+  display: flex;
+  font-size: 23px;
+  gap: 1em;
+  width: 280px;
+}
+
+.menu-titulo,
+#btn-mobile {
+  display: none;
+}
+
+#menu a:hover {
+  background-color: var(--colorBlue);
+  font-size: 1em;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--colorWhite);
+  padding: 35% 2%;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p,
+footer {
+  font-family: "Nunito";
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: var(--colorDarkGray);
+  font-weight: lighter;
+  color: var(--colorWhite);
+  height: auto;
+  padding: 25px;
+  text-align: center;
+}
+
+footer > a {
+  color: var(--colorWhite);
+  text-decoration: none;
+}
+
+footer > a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+/* Redes icons*/
+/* Estilos base para os ícones */
+.container-icon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-icon a {
+  font-family: "Nunito";
+  font-weight: 800;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--colorDarkGray);
+}
+
+.icon a {
+  text-decoration: none;
+}
+
+/* Efeito de zoom */
+.hover-zoom .imagem {
+  transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover .imagem {
+  transform: scale(1.1);
+}
+
+/* Animação da seta de indicação */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pulsating-word {
+  animation: pulse 1.5s infinite alternate;
+}
+
+.box-seta-desce,
+.box-seta-sobe,
+.box-seta-desce-white{
+  font-size: 1em;
+  font-family: 'Nunito';
+  font-weight: 900;
+  height: auto;
+  text-align: center;
+}
+
+.box-seta-desce a,
+.box-seta-sobe a {
+  text-decoration: none;
+  color: var(--colorDarkGray);
+}
+
+.box-seta-desce-white a {
+  text-decoration: none;
+color: var(--colorWhite);
+}
+
+.img-seta-indicativa {
+  max-width: 30px;
+}

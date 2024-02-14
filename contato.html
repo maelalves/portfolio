@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="assets/css/global/global.css">
+<link rel="stylesheet" href="assets/css/media/media-query-form-contact.css"> <!-- Adicione o caminho correto para o seu arquivo CSS principal -->
+<title>Formulário de Contato</title>
+<style>
+    .error-message {
+        color: red;
+        font-size: 10px;
+    }
+</style>
+</head>
+<body>
+<header id="header">
+    <h1>
+        <strong><a href="index.html">Web Studio</a></strong>
+        <span class="retira-parte-do-titulo">- design centrado no Usuário</span>
+    </h1>
+    <nav id="nav">
+        <button id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span class="menu-titulo">Menu</span>
+            <span id="hamburguer"></span>
+        </button>
+        <ul id="menu" role="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Entre em contato</h2>
+    <p>Sinta-se à vontade para entrar em contato comigo</p>
+    <div class="container-form">
+        <form action="https://formsubmit.co/alves.frontend@gmail.com" method="POST" id="contactForm">
+
+            <!-- Esse input configura para a pagina de obrigado estilizada do site-->
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks-contact.html">
+            
+            <!-- Desativa o captcha-->
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required aria-describedby="nomeError">
+                    <span class="error-message" id="nomeError" aria-live="assertive"></span>
+                </div>
+                <div class="form-item">
+                    <label for="email">Seu melhor email:</label>
+                    <input type="email" id="email" name="email" required aria-describedby="emailError">
+                    <span class="error-message" id="emailError" aria-live="assertive"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="whatsapp">Seu whatsapp:</label>
+                    <input type="text" id="whatsapp" name="whatsapp" required aria-describedby="whatsappError">
+                    <span class="error-message" id="whatsappError" aria-live="assertive"></span>
+                </div>
+                <div class="form-item">
+                    <label for="assunto">Sobre o que quer falar?</label>
+                    <input type="text" id="assunto" name="assunto" required aria-describedby="assuntoError">
+                    <span class="error-message" id="assuntoError" aria-live="assertive"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="mensagem">Caixa de mensagem:</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea id="mensagem" name="mensagem" rows="4" required aria-describedby="mensagemError"></textarea>
+                <span class="error-message" id="mensagemError" aria-live="assertive"></span>
+            </div>
+            <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+    </div>
+    <p class="social-media">Me siga nas redes sociais</p>
+
+    <div class="contato-rede-social-icon">
+        <a href="https://www.instagram.com/ismaelalveswebstudio/" class="hover-zoom" target="_blank">
+            <img src="assets/img/icon/icon-instagram.png" alt="Pagina de Ismael Alves no Instagram" class="icon imagem">
+        </a>
+
+        <a href="https://www.behance.net/ismaelalveswebstudio/" class="hover-zoom" target="_blank">
+            <img src="assets/img/icon/icon-behance.png" alt="Pagina de Ismael Alves no Behance" class="icon imagem">
+        </a>
+
+        <a href="https://dribbble.com/ismaelalveswebstudio" class="hover-zoom" target="_blank">
+            <img src="assets/img/icon/icon-dribbble.png" alt="Pagina do perfil de Ismael Alves no Dribbble" class="icon imagem">
+        </a>
+    </div>
+</div>
+<footer class="contato-container-footer">
+    Copyright © 2024. <a href="index.html">Ismael Alves - Web Studio</a>
+</footer>
+
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita que o formulário seja submetido normalmente
+
+        // Validar campos
+        var nome = document.getElementById("nome").value;
+        var email = document.getElementById("email").value;
+        var whatsapp = document.getElementById("whatsapp").value;
+        var assunto = document.getElementById("assunto").value;
+        var mensagem = document.getElementById("mensagem").value;
+
+        var nomeValido = validarCampo(nome, "nomeError");
+        var emailValido = validarCampo(email, "emailError");
+        var whatsappValido = validarCampo(whatsapp, "whatsappError");
+        var assuntoValido = validarCampo(assunto, "assuntoError");
+        var mensagemValida = validarCampo(mensagem, "mensagemError");
+
+        // Se todos os campos forem válidos, enviar o formulário
+        if (nomeValido && emailValido && whatsappValido && assuntoValido && mensagemValida) {
+            // Aqui você pode enviar o formulário normalmente ou fazer qualquer outra ação necessária
+            // Por exemplo, enviar os dados via AJAX para o servidor
+            enviarFormulario();
+        }
+    });
+
+    function validarCampo(valor, spanId) {
+        if (valor.trim() === "") {
+            document.getElementById(spanId).textContent = "Este campo é obrigatório.";
+            return false;
+        } else {
+            document.getElementById(spanId).textContent = "";
+            return true;
+        }
+    }
+
+    function enviarFormulario() {
+        // Aqui você pode enviar o formulário ou fazer qualquer outra ação necessária
+        console.log("Formulário enviado com sucesso!");
+    }
+
+    // Adicionando uma verificação de console.log para verificar se o script está sendo executado
+    console.log("O script JavaScript está funcionando!");
+</script>
+
+</body>
+</html>

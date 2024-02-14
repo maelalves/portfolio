@@ -1,0 +1,99 @@
+@import url('../components/colors.css'); /* Corrigimos o caminho da importação */
+
+@font-face {
+    font-family: "Nunito";
+    src: url('../../font/Nunito-sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf');
+}
+
+body {
+  font-family: 'Nunito';
+  color: var(--colorDarkGray);
+}
+
+@media only screen and (min-width: 1600px) and (max-width: 1920px) {
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 2%;
+    background-color: #f4f4f4; /* Mantemos a cor de fundo */
+}
+
+.container-form {
+    background-color: #fff; /* Mantemos a cor de fundo */
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 2%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container-form h2 {
+    text-align: center; /* Centralizamos o título */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-item {
+    flex: 0 0 calc(50% - 10px);
+}
+
+.form-item label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-item input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-item textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.social-media {
+    margin-top: 10px; /* Adicionamos um espaço superior */
+}
+
+#mensagem {
+  width: 100%;
+}
+
+.contato-rede-social-icon {
+  display: flex;
+  gap: 15%;
+  justify-content: center;
+}
+
+.contato-rede-social-icon img {
+  max-width: 35px;
+}
+}

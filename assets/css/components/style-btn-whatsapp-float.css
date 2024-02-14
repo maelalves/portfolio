@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* Btn-whatsapp */
+
+@media only screen and (min-width: 1024px) and (max-width: 1728px) {
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent; /* Fundo transparente */
+    padding: 6px 6px 1px 6px;
+    border-radius: 50%; /* Border-radius circular */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: solid 1px transparent;
+    
+  }
+  
+}
+  

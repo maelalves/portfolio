@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* ====== Inicio do responsivo para TABLETS */
+@media only screen and (min-width: 700px) and (max-width: 1023px) {
+    body {
+      font-size: 16px;
+    }
+  
+    main {
+      border: solid 1px white; /* Mantive a explicação do estilo */
+    }
+  
+    #header {
+      padding: 1em 2em;
+      height: 12vh;
+    }
+  
+    #header h2,
+    .container-apresentacao h1,
+    .container-sobre h2,
+    .container-rede-social h2,
+    .contato-container-info h2 {
+      font-size: 2.5em;
+    }
+  
+    #menu {
+      margin-top: 1.6em; /* Coloca margin entre o menu fixo e o drop dawn*/
+    }
+  
+    .container-apresentacao,
+    .container-sobre,
+    .container-rede-social {
+      height: auto;
+      margin: 5em 0em;
+    }
+  
+    .container-apresentacao p,
+    .container-sobre p {
+      font-size: 1.8em;
+    }
+  
+    .box-seta-indicador,
+    .retira-parte-do-titulo {
+      display: none;
+    }
+  
+    /* Icon rede social*/
+    .icon {
+      width: 90px;
+      padding: 5px;
+    }
+  
+    ul {
+      font-size: 2em;
+    }
+  
+    .contato-container-info {
+      padding: 8em 2em 23.6em 4.5em;
+      color: var(--colorCinzaEscuro);
+    }
+  
+    .contato-container-info p {
+      font-size: 30px;
+    }
+  
+    .contato-button-whatsapp {
+      display: inline-block;
+      padding: 10px 15px;
+      font-size: 2.5em;
+      text-align: center;
+      text-decoration: none;
+      background-color: #25d366; /* Cor verde do WhatsApp */
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .projeto-container {
+      width: 45%; /* ajuste para telas menores */
+      margin: 2.5%; /* ajuste da margem */
+    }
+  
+    footer {
+      font-size: 1.6em;
+    }
+  }

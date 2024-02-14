@@ -1,0 +1,10 @@
+/* Regra para  color*/
+:root {
+    --colorDarkGray: rgb(73, 73, 73);
+    --colorBlue: rgb(4, 150, 255);
+    --colorAzulPicton: #38b6ff;
+    --colorGray: rgb(102, 102, 102);
+    --colorVermelhoFerrugem: rgb(186, 63, 29);
+    --colorRichBlack: rgb(13, 19, 33);
+    --colorWhite: rgb(255, 255, 255);
+  }

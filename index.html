@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ============================================================================ -->
+    <link rel="stylesheet" href="assets/css/global/global.css" />
+    <link rel="stylesheet" href="assets/css/media/media-query-mobile.css" />
+    <link rel="stylesheet" href="assets/css/media/media-query-tablet.css" />
+    <link rel="stylesheet" href="assets/css/media/media-query-desktop.css" />
+    <link rel="stylesheet" href="assets/css/components/style-btn-whatsapp-float.css"/>
+    <!-- ============================================================================ -->
+
+    <title>Ismael alves | Web Studio</title>
+  </head>
+  <body>
+    <header id="header">
+      <h1>
+        <strong><a href="index.html">Web Studio</a></strong>
+        <span class="retira-parte-do-titulo">
+          - design centrado no Usuário</span
+        >
+      </h1>
+
+      <nav id="nav">
+        <!-- Btn que ativa o nemu hamburguer no mobile -->
+        <button
+          id="btn-mobile"
+          aria-label="Abrir menu"
+          aria-haspopup="true"
+          aria-controls="menu"
+          aria-expanded="false"
+        >
+          <span class="menu-titulo">Menu</span>
+          <!-- icon do menu hamburguer -->
+          <span id="hamburguer"></span>
+        </button>
+        <ul id="menu" role="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Section Apresentação-->
+    <main>
+      <section id="inicio" class="container-apresentacao">
+        <div class="container-apresentacao-text">
+          <h1>Ismael Alves</h1>
+          <p>
+            Sou <strong>web designer especializado</strong> em criar
+            experiências envolventes, práticas e acessíveis com técnicas
+            avançadas de <strong>UX/UI.</strong>
+            <br />
+            Integrando <strong>HTML5, CSS, JavaScript</strong> e soluções
+            <strong>WordPress</strong> para sites centrados no cliente, visando
+            crescimento sustentável.
+          </p>
+          <p>
+            Foco em ambientes digitais alinhados às necessidades do usuário e
+            empresa, superando expectativas.
+            <strong>
+              Junte-se a mim nesta jornada pelo design web impactante.
+            </strong>
+          </p>
+        </div>
+        <div >
+          <img src="assets/img/perfil/foto-perfil-350px.png" alt="" class="container-foto">
+        </div>
+      </section>
+
+      <div class="box-seta-desce">
+        <a href="#sobre">
+          <span class="pulsating-word">OI</span><br />
+          <img
+            src="assets/img/icon/seta-desce.png"
+            class="img-seta-indicativa"
+          />
+        </a>
+      </div>
+
+      <!-- Section Sobre-->
+      <section class="container-sobre" id="sobre">
+        <h2>Um pouco sobre mim</h2>
+
+        <div class="container-sobre-text">
+          <p>
+            Tenho 36 anos, moro em São Paulo, gosto de musica, tecnologia e
+            design.<br />
+            Atualmente estudo Ánalise e desenvolvimento de Sistemas e
+            <strong>Experiencia do Usuário - UX</strong>. Trabalhei na area de
+            sistemas ERP por 3 anos diretamente com o clientes, isso me fez
+            entender muito das nescessidade dos usuários de sistemas e web sites
+            desde o gerente até o atendente. <br />Ciente da necessidade
+            crecente por design centrado no usuário, descedi me dedicar ao
+            estudo do <strong>UX</strong> e entender como trazer melhor
+            usabilidade, acessibilidade e <strong>inclusão na web</strong>. Este
+            portfólio é sobre isso!
+          </p>
+        </div>
+
+        <div class="box-seta-desce-white">
+          <a href="#rede-social">
+            <span class="pulsating-word">OI</span><br />
+            <img
+              src="assets/img/icon/seta-sobe-branca.png"
+              class="img-seta-indicativa"
+            />
+          </a>
+        </div>
+      </section>
+
+      <!-- Redes-->
+      <section class="container-rede-social" id="rede-social">
+        <h2>Confira meu trabalho nas redes!</h2>
+        <div class="container-icon">
+          <a href="https://www.instagam.com/ismaelalveswebstudio" class="hover-zoom">
+              <img
+                  src="assets/img/icon/icon-instagram.png"
+                  alt="Icon Instagram"
+                  class="icon imagem"
+              /> <br>
+              <span class="icon-name">Instagram</span>
+          </a>
+          <a href="https://www.behance.com/" class="hover-zoom">
+              <img
+                  src="assets/img/icon/icon-behance.png"
+                  alt="icon do Behance"
+                  class="icon imagem"
+              /> <br>
+              <span class="icon-name">Behance</span>
+          </a>
+          <br>
+          <a href="https://www.dribbble.com/" class="hover-zoom">
+              <img
+                  src="assets/img/icon/icon-dribbble.png"
+                  alt="Icon do Dribbble"
+                  class="icon imagem"
+              /><br>
+              <span class="icon-name">Dribbble</span>
+          </a>
+          <a href="#" class="hover-zoom">
+              <img
+                  src="assets/img/icon/icon-curriculo.png"
+                  alt="icon do curriculo"
+                  class="icon imagem"
+              /><br>
+              <span class="icon-name">Currículo</span>
+          </a>
+      </div>
+      
+      </section>
+      <div class="box-seta-sobe">
+        <a href="#inicio">
+          <span class="pulsating-word">Voltar</span><br />
+          <img
+            src="assets/img/icon/seta-sobe.png"
+            class="img-seta-indicativa"
+          />
+        </a>
+      </div>
+    </main>
+    <!-- Btn do whatsapp flutuante-->
+    <button id="whatsapp-button">
+      <!-- <i class="fab fa-whatsapp"></i> -->
+      <img src="assets/img/icon/whatsapp.png" alt="Botão do whatsapp" />
+    </button>
+
+    <footer>
+      Copyright © 2024. <a href="index.html">Ismael Alves - Web Studio</a>
+    </footer>
+
+    <script src="assets/js/btn-whatsapp.js"></script>
+    <!-- Script de ativação do btn do menu e logica do aria-expanded-->
+    <script src="assets/js/btn-menu.js"></script>
+    <script src="assets/js/btn-whatsapp-float.js"></script>
+    <script src="assets/js/btn-contato.js"></script>
+  </body>
+</html>
