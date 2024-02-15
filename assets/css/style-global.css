@@ -24,8 +24,6 @@ main {
 
 /* Estilos do cabeçalho */
 #header {
-  background-color: var(--colorDarkGray);
-  color: var(--colorWhite);
   position: fixed;
   box-sizing: border-box;
   width: 100%;
@@ -34,6 +32,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: var(--colorWhite);
+  background-color: var(--colorDarkGray);
   box-shadow: 0px 1px 9px 0px var(--colorDarkGray);
   z-index: 100;
 }
