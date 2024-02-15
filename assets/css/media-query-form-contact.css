@@ -10,7 +10,6 @@ body {
   color: var(--colorDarkGray);
 }
 
-@media only screen and (min-width: 1600px) and (max-width: 1920px) {
 .container {
     display: flex;
     flex-direction: column;
@@ -96,4 +95,51 @@ body {
 .contato-rede-social-icon img {
   max-width: 35px;
 }
+
+@media only screen and (min-width: 1600px) and (max-width:1919px) {
+    .container h2 {
+        font-size: 2.5em;
+    }
+
+    .container p {
+        font-size: 1.5em;
+    }
+
+    .container-form {
+        width: 600px;
+    }
+
+    .form-item {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .submit-btn {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .container h2 {
+        font-size: 4em;
+    }
+
+    .container p {
+        font-size: 1.9em;
+    }
+
+    .container-form {
+        width: 800px;
+    }
+
+    .form-item {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .submit-btn {
+        font-size: 1.8em;
+        font-weight: bold;
+    }
 }
