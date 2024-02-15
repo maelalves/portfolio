@@ -14,7 +14,7 @@ as resoluções mais usadas em janeiro de 2024 no Brasil são:
   /* Estilos das seções */
 .container-apresentacao,
 .container-sobre,
-.contato-container-info{
+.contato-container-info {
   width: 100%;
   margin-bottom: 0.2%;
   box-sizing: border-box;
@@ -261,7 +261,7 @@ as resoluções mais usadas em janeiro de 2024 no Brasil são:
 .thanks-container {
   margin: 2%;
   height: 0 auto;
-  margin-top: 10%;
+  margin-top: 13.3%;
   text-align: center;
 }
 
@@ -296,6 +296,18 @@ main .thanks-container {
     padding-top: 10%;
   }
 
+  /* Pagina de thanks */
+  .thanks-container {
+    margin-top: 13.3%;
+  }
+  .thanks-container h1 {
+    font-size: 2.5em;
+  }
+
+  .thanks-container p {
+    font-size: 1.5em;
+  }
+
   footer {
     font-size: 1.2em;
   }
@@ -323,10 +335,21 @@ main .thanks-container {
     padding-top: 10%;
   }
 
-  footer  {
-    font-size: 1.5em;
+  /* Pagina de thanks */
+  .thanks-container {
+    margin-top: 19.2%;
+  }
+  .thanks-container h1 {
+    font-size: 3em;
   }
 
+  .thanks-container p {
+    font-size: 1.8em;
+  }
+
+  footer {
+    font-size: 1.5em;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -354,9 +377,19 @@ main .thanks-container {
     height: 100vh;
   }
 
-  
+  /* Pagina de thanks */
+  .thanks-container {
+    margin-top: 24.61%;
+  }
+  .thanks-container h1 {
+    font-size: 3.5em;
+  }
+
+  .thanks-container p {
+    font-size: 1.8em;
+  }
 
   footer {
-    font-size:1.7em ;
+    font-size: 1.7em;
   }
 }
