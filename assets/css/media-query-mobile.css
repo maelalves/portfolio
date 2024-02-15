@@ -1,389 +1,96 @@
 @charset "UTF-8";
 @import url(components/colors.css);
-
-/* ====== Início do responsivo para MOBILE */
-@media only screen and (min-width: 320px) and (max-width: 850px) {
-  /* Elementos não visiveis no mobile*/
-  #whatsapp-button {
-    display: none;
-  }
-
-  .container-foto {
-    display: none;
-  }
-
-  /* ====== Estilo com base no Samsung Galaxy S20 */
-  body,
-  ul {
-    font-weight: 500;
-    line-height: 1.5;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  h1 {
-    font-size: 1.8em;
-    font-weight: 800;
-  }
-
-  h2 {
-    font-size: 1.5em;
-    font-weight: 800;
-  }
-
-  #header {
-    position: fixed;
-    box-sizing: border-box;
-    width: 100vw;
-    height: 70px;
-    padding: 1em 2em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--colorWhite);
-    box-shadow: 0px 1px 9px 0px var(--colorDarkGray);
-    z-index: 2;
-  }
-
-  .container-apresentacao {
-    display: block;
-    text-align: justify;
-    color: var(--colorDarkGray);
-    width: 100vw;
-    height: auto;
-    align-items: center;
-    padding: 2% 5%; /* Corrigido */
-    margin-top: 20%;
-    margin-bottom: 25%;
-  }
-
-  .container-apresentacao p,
-  .container-sobre p {
-    font-size: 1.2em;
-    text-align: left;
-    width: 85vw;
-  }
-
-  .container-sobre {
-    background-color: var(--colorGray);
-    color: var(--colorWhite);
-    display: block;
-    text-align: justify;
-    width: 100vw;
-    height: auto;
-    align-items: center;
-    padding: 15% 5%; /* Corrigido */
-  }
-
-  .img-icon-sobre {
-    display: none;
-  }
-
-  .container-rede-social {
-    color: var(--colorDarkGray);
-    text-align: center;
-    height: 70vh;
-    padding: 2% 5%; /* Corrigido */
-    margin: 3em;
-  }
-
-  .container-rede-social h2 {
-    font-size: 1.5em;
-  }
-
-  .container-rede-social a {
-    font-weight: 700;
-  }
-
-
-  .icon-name {
-    display: block;
-  }
-
-  #btn-mobile {
-    display: flex;
-    padding: 0.5rem 1rem;
-    font-size: 0.895em;
-    font-weight: 600;
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: var(--colorWhite);
-    gap: 0.5rem;
-  }
-
-  #hamburguer {
-    display: block;
-    width: 35px;
-    border-top: 0.3em solid;
-    color: var(--colorWhite);
-  }
-
-  #hamburguer::after,
-  #hamburguer::before {
-    content: "";
-    display: block;
-    width: 35px;
-    height: 0.2em;
-    background: currentColor;
-    margin-top: 5px;
-    transition: 0.3s;
-    position: relative;
-    border-top: 0.1em solid;
-  }
-
-  #hamburguer:hover {
-    color: var(--colorBlue);
-  }
-
-  #nav.active #hamburguer {
-    border-top-color: transparent;
-  }
-
-  #nav.active #hamburguer::before {
-    transform: rotate(135deg);
-  }
-
-  #nav.active #hamburguer::after {
-    transform: rotate(-135deg);
-    top: -9px;
-  }
-
-  #menu {
-    display: block;
-    position: absolute;
-    width: 100%;
-    top: 45px;
-    right: 0px;
-    background: var(--colorGray);
-    transition: 0.6s;
-    z-index: 1000;
-    visibility: hidden;
-    overflow-y: hidden;
-    font-size: 1.4em; /* Corrigido */
-    margin-top: 0.5em;
-  }
-
-  #menu a {
-    display: block;
-    padding: 0.8rem 0rem 0.8rem 0.8rem;
-    border-bottom: 1px solid;
-  }
-
-  #menu a:hover {
-    background: var(--colorBlue);
-  }
-
-  #nav.active #menu {
-    height: calc(100vh - 70px);
-    visibility: visible;
-    overflow-y: auto;
-  }
-
-  footer {
-    font-size: .955em;
-    height: auto;
-    padding: 5%; /* Alterado para 5% */
-    text-align: center;
-  }
-
-  /* ================= Contato ================= */
-  .contato-container-info {
-    align-items: center;
-    padding: 25% 5% 36.2% 10%;
-    margin-bottom: 9%;
-  }
-
-  .contato-container-text-info a {
-    text-decoration: underline;
-    color: var(--colorDarkGray);
-    cursor: pointer;
-  }
-
-  .contato-container-text-info h2 {
-    color: var(--colorDarkGray);
-    font-weight: 800;
-  }
-
-  .contato-container-text-info p {
-    color: var(--colorDarkGray);
-    font-size: 1.3em;
-    width: 85vw;
-  }
-
-  .contato-container-icons {
-    width: auto;
-    padding: 0.5%;
-  }
-
-  .contato-container-icons ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .contato-container-icons li {
-    display: inline-block;
-    margin-right: 1%;
-  }
-
-  .contato-button-whatsapp {
-    font-family: "Nunito";
-    font-weight: bold;
-    font-size: 1em;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    padding: 3%;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .contato-button-whatsapp-texto {
-    font-size: 1.2em;
-    padding-top: 10px;
-    color: var(--colorCinzaEscuro);
-  }
-
-  .contato-button-whatsapp-texto a:hover {
-    background-color: var(--colorBlue);
-  }
-
-  .box-seta-desce,
-  .box-seta-sobe,
-  .retira-parte-do-titulo {
-    display: none;
-  }
-
-  /* Estilos dos elementos da página de projetos */
-  .projeto-container-01 {
-    height: auto;
-    padding: 25% 15%;
-    text-align: center;
-    position: relative; /* Ou mantenha o position: static */
-    z-index: 1; /* Um valor menor que o do cabeçalho */
-  }
-
-  .projeto-container {
-    width: calc(
-      20% - 20px
-    ); /* ajuste para telas maiores, levando em consideração a margem */
-    margin: 2.5%; /* ajuste da margem */
-    width: 250px; /* largura de cada container */
-    height: 150px; /* altura de cada container */
-    background-size: cover; /* ajusta o tamanho da imagem de fundo */
-    background-position: center; /* centraliza a imagem de fundo */
-    border: 1px solid #ccc; /* borda para separar os containers */
-    display: inline-block; /* para que fiquem lado a lado */
-    margin: 2%; /* margem entre os containers */
-    box-sizing: border-box; /* inclui a borda no tamanho total */
-    text-align: center; /* centraliza o conteúdo */
-    line-height: 100px; /* centraliza verticalmente o conteúdo */
-    position: relative; /* para posicionamento absoluto do título */
-    overflow: hidden; /* oculta o título */
-    transition: background-color 0.3s, color 0.3s; /* transição suave */
-  }
-
-  .projeto-container-01 h2 {
-    color: var(--colorDarkGray);
-    font-size: 1.5em;
-    font-weight: 800;
-  }
-
-  .projeto-container a {
-    text-decoration: none;
-    color: var(--colorWhite);
-  }
-
-  /* Efeito hover */
-  .projeto-container:hover {
-    background-color: var(--colorBlue); /* cor de fundo ao passar o mouse */
-    cursor: pointer;
-  }
-
-  .projeto-container:hover img {
-    /* Faz o backgroud-img ficar oculto no efeito hover */
-    display: none;
-  }
-
-  .projeto-container-capa {
-    width: 250px;
-  }
-
-  /* Título */
-  .title {
-    width: 100%;
-    line-height: 1.6;
-  }
-
-  .projeto-container .title {
-    position: absolute; /* posicionamento absoluto */
-    top: 50%; /* alinhamento vertical no meio */
-    left: 50%; /* alinhamento horizontal no meio */
-    transform: translate(-50%, -50%); /* centraliza o título */
-    color: var(--colorWhite); /* cor do título */
-    opacity: 0; /* torna o título inicialmente invisível */
-    transition: opacity 0.3s; /* transição suave da opacidade */
-    z-index: 2; /* coloca o título sobre o conteúdo */
-  }
-
-  /* Tornar o título visível no hover */
-  .projeto-container:hover .title {
-    opacity: 1; /* torna o título visível */
-  }
+@font-face {
+  font-family: 'Nunito';
+  src: url(../font/Nunito-sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
 }
 
-/* ====== Estilo com base no iPhone 13 Pro Max */
-@media only screen and (min-width: 400px) and (max-width: 769px) {
-  .box-seta-indicador-01,
-  .box-seta-indicador-02,
+@media only screen and (min-width: 360px) and (max-width: 413px) {
+  /* Elementos não visíveis no mobile*/
+
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .remove-text,
+  .container-foto,
+  .box-seta-desce,
+  .box-seta-desce-white,
+  .box-seta-sobe,
+  #whatsapp-button,
+  .img-icon-sobre,
   .retira-parte-do-titulo {
     display: none;
   }
 
   .container-apresentacao {
+    margin-top: 24%;
+  }
+  .container-apresentacao,
+  .container-sobre {
     display: block;
-    text-align: justify;
-    color: var(--colorDarkGray);
-    width: 100vw;
+    width: 100%;
     height: auto;
+    padding: 2em 1em;
     align-items: center;
-    padding: 2% 5%; /* Corrigido */
-    margin-top: 20%;
-    margin-bottom: 33%;
+  }
+
+  .container-apresentacao-text,
+  .container-sobre-text {
+    width: 100%;
+    font-size: 1.4em;
+    text-align: left;
+    padding: 5px;
+    margin: 0;
+  }
+
+  .container-sobre-text {
+    font-weight: 300;
+    margin: 20% 0%;
+  }
+
+  .container-apresentacao-text h1 {
+    font-size: 2em;
+  }
+
+  .container-sobre-text h2 {
+    display: block;
+    font-size: 1.2em;
+    margin-left: 0;
   }
 
   .container-rede-social {
-    color: var(--colorDarkGray);
-    text-align: center;
-    height: 70vh;
-    padding: 2% 10%; /* Corrigido */
+    height: 60vh;
+    padding: 6em 1em;
   }
 
   .container-rede-social h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
+
   }
 
-  .container-rede-social a {
-    font-weight: 700;
-    height: auto;
-  }
+  .container-icon {
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center; /* Adicionado para centralizar os ícones */
+}
 
-  .texto-menu {
-    display: none;
-  }
+.icon {
+    max-width: 100%;
+}
 
-  .contato-container-info {
-    align-items: center;
-    padding: 6em 2em;
-    margin-bottom: 25%;
-  }
+.icon-name {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
 
-  footer {
-    font-size: 1.2em;
-  }
+footer {
+  font-size: .899em;
+  font-weight: 300;
+}
+
 }
