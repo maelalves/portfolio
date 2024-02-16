@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url(components/colors.css);
 
-@media only scren and (min-width: 360px) and (max-width: 600px) {
+@media only screen and (min-width: 360px) and (max-width: 1284px) {
 #btn-mobile {
     display: flex;
     padding: 0.5rem 1rem;
@@ -55,7 +55,7 @@
     display: block;
     position: absolute;
     width: 100%;
-    top: 45px;
+    top: 60px;
     right: 0px;
     background: var(--colorGray);
     transition: 0.6s;
@@ -68,17 +68,49 @@
 
   #menu a {
     display: block;
-    padding: 0.8rem 0rem 0.8rem 0.8rem;
+    padding: 0.8rem 1rem;
     border-bottom: 1px solid;
   }
 
   #menu a:hover {
     background: var(--colorBlue);
+    padding: 15px;
+    font-weight: 500;
   }
 
   #nav.active #menu {
     height: calc(100vh - 70px);
     visibility: visible;
     overflow-y: auto;
+  }
+}
+
+/* iPhone 11*/
+@media only screen and (min-width: 828px) and (max-width: 1169px) {
+  #header {
+    height: auto;
+  }
+  #menu {
+    top: 80px
+  }
+}
+/* iPhone 12 */
+@media only screen and (min-width: 1170px) and (max-width: 1283px) {
+  #header {
+    height: auto;
+  }
+
+  #menu {
+    top: 80px;
+  }
+}
+/* iPhone 13 Pro Max */
+@media only screen and (min-width: 1284px) {
+  #header {
+    height: auto;
+  }
+
+  #menu {
+    top: 80px;
   }
 }

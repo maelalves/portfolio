@@ -1,27 +1,31 @@
 @charset "UTF-8";
 @import url(components/colors.css);
 @font-face {
-  font-family: 'Nunito';
-  src: url(../font/Nunito-sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf);
+  font-family: "Nunito";
+  src: url(../font/Nunito-sans/NunitoSans-VariableFont_YTLC\opsz\wdth\wght.ttf);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.remove-text,
+.container-foto,
+.box-seta-desce,
+.box-seta-desce-white,
+.box-seta-sobe,
+#whatsapp-button,
+.img-icon-sobre,
+.remove-text {
+  display: none;
 }
 
 @media only screen and (min-width: 360px) and (max-width: 413px) {
   /* Elementos não visíveis no mobile*/
 
-  body {
-    padding: 0;
-    margin: 0;
-  }
-  
-  .remove-text,
-  .container-foto,
-  .box-seta-desce,
-  .box-seta-desce-white,
-  .box-seta-sobe,
-  #whatsapp-button,
-  .img-icon-sobre,
-  .retira-parte-do-titulo {
-    display: none;
+  #header h1 {
+    font-size: 1.5em;
   }
 
   .container-apresentacao {
@@ -62,12 +66,11 @@
 
   .container-rede-social {
     height: 60vh;
-    padding: 6em 1em;
+    padding: 5.2em 1em;
   }
 
   .container-rede-social h2 {
     font-size: 1.8em;
-
   }
 
   .container-icon {
@@ -76,21 +79,86 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     text-align: center; /* Adicionado para centralizar os ícones */
-}
+  }
 
-.icon {
+  .icon {
     max-width: 100%;
-}
+  }
 
-.icon-name {
+  .icon-name {
     display: block;
     text-align: center;
     margin-top: 10px;
+  }
+
+  footer {
+    font-size: 0.899em;
+    font-weight: 300;
+  }
 }
 
-footer {
-  font-size: .899em;
-  font-weight: 300;
-}
+/*=========== iPhone ===========*/
+/* iPhone 11*/
+@media only screen and (min-width: 828px) and (max-width: 1169px) {
+  .container-apresentacao {
+    margin-top: 11.5%;
+    border: 1px solid red;
+  }
+  .container-apresentacao,
+  .container-sobre {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 5em 2em;
+    align-items: center;
+    box-sizing: border-box;
+  }
 
+  .container-apresentacao-text {
+    width: 100%;
+    font-size: 1.9em;
+    text-align: left;
+    padding: 2em;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid blue;
+    
+  }
+
+  .container-apresentacao h1 {
+    font-size: 2em;
+  }
+
+  .container-sobre {
+    border: 1px solid purple;
+    margin-top: 1em;
+  }
+
+  .container-sobre-text {
+    width: 100%;
+    font-size: 1.9em;
+    font-weight: 300;
+    text-align: left;
+    padding: 2em;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid blue;
+  }
+
+  .container-sobre-text h2,
+  .container-rede-social h2 {
+    font-size: 1.5em;
+    margin: 0;
+    border: 1px solid red;
+  }
+
+  .container-rede-social h2 {
+    font-weight: 700;
+  }
+}
+/* iPhone 12 */
+@media only screen and (min-width: 1170px) and (max-width: 1283px) {
+}
+/* iPhone 13 Pro Max */
+@media only screen and (min-width: 1284px) {
 }
